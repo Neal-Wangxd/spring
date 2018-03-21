@@ -21,8 +21,11 @@ public class UserTest {
 		ApplicationContext application = new ClassPathXmlApplicationContext("application.xml");
 		//得到配置文件中对象的ID
 		User user = (User) application.getBean("user");
-		System.out.println(user);
+		User user1 = (User) application.getBean("user");
+		System.out.println(user.hashCode());
+		System.out.println(user1.hashCode());
 		user.testUser();
+		user1.testUser();
 	}
 	
 
