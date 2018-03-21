@@ -26,6 +26,10 @@ public class User {
 		System.out.println("使用有参构造注入属性:----"+name);
 	}
 	
+	public void testSetUser(){
+		System.out.println("使用SET注入属性:----"+name);
+	}
+	
 	public User(String name) {
 		this.name = name;
 	}
