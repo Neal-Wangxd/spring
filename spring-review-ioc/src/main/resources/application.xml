@@ -40,4 +40,17 @@
     	<property name="dept" value="Oracle开发"></property>
     </bean>
     
+    
+    <!-- 注入对象类型的属性 -->
+    <!-- 配置对象 -->
+    <bean id="userDao" class="com.spring.dao.UserDao"></bean>
+    <bean id="userService" class="com.spring.service.UserService">
+    	<!-- 注入dao对象 ,
+    		name属性值，写的是service类中属性名称
+    		此时不能写value来获取值,
+    		需要写ref引用,dao配置bean中id值
+    	-->
+    	<property name="dao" ref="userDao"></property>
+    </bean>
+    
 </beans>
