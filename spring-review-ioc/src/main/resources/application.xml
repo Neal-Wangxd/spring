@@ -30,4 +30,14 @@
     	<constructor-arg name="dept" value="Java开发"></constructor-arg> 
     	-->
     </bean>
+    
+    
+    <!-- 使用set方法注入属性 -->
+    <bean id="setUser" class="com.spring.bean.User">
+    	<!-- 注入属性值 -->
+    	<property name="name" value="陈冠佑"></property>
+    	<property name="age" value="20"></property>
+    	<property name="dept" value="Oracle开发"></property>
+    </bean>
+    
 </beans>
