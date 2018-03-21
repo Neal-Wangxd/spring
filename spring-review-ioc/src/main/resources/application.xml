@@ -6,9 +6,19 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd">
     
     <!-- IOC入门 -->
-    <bean id="user" class="com.spring.bean.User" > </bean>
+    <!-- 
+    	scope="singleton"  单实例
+    	scope="prototype"  多实例
+     -->
+    <bean id="user" class="com.spring.bean.User" scope="prototype"> </bean>
     
     <!-- 使用静态工厂创建对象 -->
     <bean id="userFactory" class="com.spring.beanFactory.UserFactory" factory-method="getUser"></bean>
     
+    
+    <!-- 使用实例工厂创建对象 -->
+    <!-- 需要先创建工厂对象 -->
+    <bean id="userFactoryNom" class="com.spring.beanFactory.UserFactoryNom"></bean>
+    <!--  -->
+    <bean id="userNom" factory-bean="userFactoryNom" factory-method="getUser"></bean>
 </beans>
