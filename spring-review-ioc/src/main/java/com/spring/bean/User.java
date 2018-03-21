@@ -1,4 +1,6 @@
-package com.spring.bean; 
+package com.spring.bean;
+
+
 /** 
 * @author 作者 wxd  
 * @version 1.0
@@ -18,6 +20,14 @@ public class User {
 	
 	public void testUser(){
 		System.out.println("测试User对象的创建**********");
+	}
+	
+	public void testProperty(){
+		System.out.println("使用有参构造注入属性:----"+name);
+	}
+	
+	public User(String name) {
+		this.name = name;
 	}
 	
 	public User(String name, int age, String dept) {
