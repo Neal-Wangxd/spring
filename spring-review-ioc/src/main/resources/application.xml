@@ -19,6 +19,15 @@
     <!-- 使用实例工厂创建对象 -->
     <!-- 需要先创建工厂对象 -->
     <bean id="userFactoryNom" class="com.spring.beanFactory.UserFactoryNom"></bean>
-    <!--  -->
     <bean id="userNom" factory-bean="userFactoryNom" factory-method="getUser"></bean>
+    
+    <!-- 使用有参构造注入属性 -->
+    <bean id="propertyUser" class="com.spring.bean.User">
+    	<!-- 使用有参构造注入 -->
+    	<constructor-arg name="name" value="王小贱"></constructor-arg>
+    	<!-- 
+    	<constructor-arg name="age" value="18"></constructor-arg>
+    	<constructor-arg name="dept" value="Java开发"></constructor-arg> 
+    	-->
+    </bean>
 </beans>
