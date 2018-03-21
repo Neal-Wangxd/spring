@@ -8,5 +8,7 @@
     <!-- IOC入门 -->
     <bean id="user" class="com.spring.bean.User" > </bean>
     
+    <!-- 使用静态工厂创建对象 -->
+    <bean id="userFactory" class="com.spring.beanFactory.UserFactory" factory-method="getUser"></bean>
     
 </beans>
