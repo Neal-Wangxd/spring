@@ -56,4 +56,44 @@
     
     <!-- p名称空间注入 -->
     <bean id="pUser" class="com.spring.bean.User" p:pname="P空间注入"></bean>
+    
+    
+    <!-- 注入复杂类型属性值 -->
+    <bean id="arrUser" class="com.spring.bean.User">
+    	<property name="arrs">
+    		<list>
+    			<value>TREK</value>
+    			<value>GIANT</value>
+    			<value>UCC</value>
+    			<value>MERIDA</value>
+    		</list>
+    	</property>
+    </bean>
+    <bean id="listUser" class="com.spring.bean.User">
+    	<property name="list">
+    		<list>
+    			<value>TREK</value>
+    			<value>GIANT</value>
+    			<value>UCC</value>
+    			<value>MERIDA</value>
+    		</list>
+    	</property>
+    </bean>
+    <bean id="mapUser" class="com.spring.bean.User">
+    	<property name="map">
+    		<map>
+    			<entry key="TREK" value="10000"></entry>
+    			<entry key="GIANT" value="5000"></entry>
+    			<entry key="UCC" value="4500"></entry>
+    		</map>
+    	</property>
+    </bean>
+    <bean id="proUser" class="com.spring.bean.User">
+    	<property name="properties">
+    		<props>
+    			<prop key="dirverclass">com.mysql.jdbc.Driver</prop>
+    			<prop key="username">root</prop>
+    		</props>
+    	</property>
+    </bean>
 </beans>
