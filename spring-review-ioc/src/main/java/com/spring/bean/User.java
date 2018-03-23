@@ -14,6 +14,8 @@ public class User {
 	private int age;
 	private String dept;
 	
+	private String pname;
+	
 	public User(){
 		
 	}
@@ -30,19 +32,24 @@ public class User {
 		System.out.println("使用SET注入属性:----"+name);
 	}
 	
+	public void testPname(){
+		System.out.println("使用P空间注入属性:----"+pname);
+	}
+	
 	public User(String name) {
 		this.name = name;
 	}
 	
-	public User(String name, int age, String dept) {
+	public User(String name, int age, String dept, String panem) {
 		super();
 		this.name = name;
 		this.age = age;
 		this.dept = dept;
+		this.pname = panem;
 	}
 	@Override
 	public String toString() {
-		return "User [name=" + name + ", age=" + age + ", dept=" + dept + "]";
+		return "User [name=" + name + ", age=" + age + ", dept=" + dept + ", pname=" + pname +"]";
 	}
 	public String getName() {
 		return name;
@@ -61,6 +68,14 @@ public class User {
 	}
 	public void setDept(String dept) {
 		this.dept = dept;
+	}
+
+	public String getPname() {
+		return pname;
+	}
+
+	public void setPname(String pname) {
+		this.pname = pname;
 	}
 	
 	
