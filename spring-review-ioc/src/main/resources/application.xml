@@ -53,4 +53,7 @@
     	<property name="dao" ref="userDao"></property>
     </bean>
     
+    
+    <!-- p名称空间注入 -->
+    <bean id="pUser" class="com.spring.bean.User" p:pname="P空间注入"></bean>
 </beans>
