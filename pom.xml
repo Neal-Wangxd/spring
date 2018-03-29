@@ -118,5 +118,6 @@
     <module>spring-review-ioc-anno</module>
     <module>spring-review-aop</module>
     <module>spring-review-web</module>
+    <module>spring-review-aop-anno</module>
   </modules>
 </project>
