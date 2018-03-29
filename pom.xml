@@ -119,5 +119,6 @@
     <module>spring-review-aop</module>
     <module>spring-review-web</module>
     <module>spring-review-aop-anno</module>
+    <module>spring-review-jdbcTemplate</module>
   </modules>
 </project>
