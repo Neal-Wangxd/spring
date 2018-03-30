@@ -120,5 +120,6 @@
     <module>spring-review-web</module>
     <module>spring-review-aop-anno</module>
     <module>spring-review-jdbcTemplate</module>
+    <module>spring-review-c3p0</module>
   </modules>
 </project>
