@@ -4,12 +4,12 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
-import org.junit.Test;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
 import com.spring.bean.User;
 import com.spring.util.UserRowMapper;
+
 
 /** 
 * @author 作者 wxd  
@@ -33,25 +33,21 @@ public class UserDao {
 		jdbcTemplate.update(sql, user.getAge(),user.getHight(),user.getSalary(),user.getUsername(),user.getBirthday());
 	}
 	
-	@Test
 	public void update(User user){
 		String sql = "UPDATE USER SET AGE=?,HIGHT=?,SALARY=?,USERNAME=?,BIRTHDAY=? WHERE ID=?";
 		jdbcTemplate.update(sql,user.getAge(),user.getHight(),user.getSalary(),user.getUsername(),user.getBirthday(),user.getId());
 	}
 	
-	@Test
 	public void delete(int id){
 		String sql = "DELETE FROM USER WHERE ID=?";
 		jdbcTemplate.update(sql,id);
 	}
 	
-	@Test
 	public int count(){
 		String sql = "SELECT COUNT(*) FROM USER";
 		return jdbcTemplate.queryForObject(sql, Integer.class);
 	}
 	
-	@Test
 	public User getUserByName(String name){
 		User user = null;
 		try {
@@ -63,7 +59,6 @@ public class UserDao {
 		return user;
 	}
 	
-	@Test
 	public List<User> getUserList(){
 		List<User> userList = null;
 		try {
