@@ -122,5 +122,6 @@
     <module>spring-review-jdbcTemplate</module>
     <module>spring-review-c3p0</module>
     <module>spring-review-transaction</module>
+    <module>spring-review-transaction-anno</module>
   </modules>
 </project>
