@@ -15,6 +15,8 @@
   </properties>
 <dependencyManagement>
   <dependencies>
+	
+  
     <dependency>
 	    <groupId>org.springframework</groupId>
 	    <artifactId>spring-context</artifactId>
@@ -24,7 +26,7 @@
 	<dependency>
 	    <groupId>org.springframework</groupId>
 	    <artifactId>spring-core</artifactId>
-	    <version>4.3.16.RELEASE</version>
+	    <version>5.0.8.RELEASE</version>
 	</dependency>
 	
 	<dependency>
